@@ -35,7 +35,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     override func didReceiveMemoryWarning() {
         // call the parent function
         super.didReceiveMemoryWarning()
-        
+
         // Dispose of any resources that can be recreated.
     }
     

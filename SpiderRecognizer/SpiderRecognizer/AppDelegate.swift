@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // create the user interface window and make it visible
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-        
-        // create the view controller and root view controller
-        let vc = ViewController()
-        window?.rootViewController = vc
+//        // create the user interface window and make it visible
+//        window = UIWindow()
+//        window?.makeKeyAndVisible()
+//
+//        // create the view controller and root view controller
+//        let vc = ViewController()
+//        window?.rootViewController = vc
         
         // return true upon success
         return true

@@ -13,6 +13,9 @@
 		182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC97224F799900348D8B /* LaunchScreen.storyboard */; };
 		182DFCA1224F7C5800348D8B /* spider_vgg.model in Sources */ = {isa = PBXBuildFile; fileRef = 182DFCA0224F7C5800348D8B /* spider_vgg.model */; };
 		182DFCA3224F830300348D8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DFCA2224F830300348D8B /* icon.png */; };
+		AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE33D3F222561F4A003C0DA1 /* Main.storyboard */; };
+		AE33D3F522561F85003C0DA1 /* spider_vgg.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */; };
+		AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F622562132003C0DA1 /* LandingPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		182DFC9A224F799900348D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182DFCA0224F7C5800348D8B /* spider_vgg.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = spider_vgg.model; sourceTree = "<group>"; };
 		182DFCA2224F830300348D8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		AE33D3F222561F4A003C0DA1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = spider_vgg.mlmodel; sourceTree = "<group>"; };
+		AE33D3F622562132003C0DA1 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				182DFCA0224F7C5800348D8B /* spider_vgg.model */,
+				AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */,
 				182DFC8E224F799600348D8B /* AppDelegate.swift */,
 				182DFC90224F799600348D8B /* ViewController.swift */,
 				182DFC95224F799900348D8B /* Assets.xcassets */,
 				182DFC97224F799900348D8B /* LaunchScreen.storyboard */,
 				182DFC9A224F799900348D8B /* Info.plist */,
 				182DFCA2224F830300348D8B /* icon.png */,
+				AE33D3F222561F4A003C0DA1 /* Main.storyboard */,
+				AE33D3F622562132003C0DA1 /* LandingPage.swift */,
 			);
 			path = SpiderRecognizer;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 				182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */,
 				182DFC96224F799900348D8B /* Assets.xcassets in Resources */,
 				182DFCA3224F830300348D8B /* icon.png in Resources */,
+				AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE33D3F522561F85003C0DA1 /* spider_vgg.mlmodel in Sources */,
+				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
 				182DFC91224F799600348D8B /* ViewController.swift in Sources */,
 				182DFCA1224F7C5800348D8B /* spider_vgg.model in Sources */,
 				182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */,
@@ -279,13 +291,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52XL6NRZ66;
+				DEVELOPMENT_TEAM = PWJ9329DU2;
 				INFOPLIST_FILE = SpiderRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = donghany.SpiderRecognizer;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zhenyy.github.SpiderRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,13 +309,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52XL6NRZ66;
+				DEVELOPMENT_TEAM = PWJ9329DU2;
 				INFOPLIST_FILE = SpiderRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = donghany.SpiderRecognizer;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zhenyy.github.SpiderRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
