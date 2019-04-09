@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Daddy Long Legs Spider</folder>
+	<filename>54.jpg</filename>
+	<path>C:\Users\vincent916735\Desktop\poisonous-spider-recognition\labelled_dataset\Daddy Long Legs Spider\54.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Daddy Long Legs Spider</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>39</xmin>
+			<ymin>10</ymin>
+			<xmax>513</xmax>
+			<ymax>531</ymax>
+		</bndbox>
+	</object>
+</annotation>

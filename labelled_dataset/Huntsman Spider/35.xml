@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Huntsman Spider</folder>
+	<filename>35.jpg</filename>
+	<path>C:\Users\vincent916735\Desktop\poisonous-spider-recognition\labelled_dataset\Huntsman Spider\35.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Huntsman Spider</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>122</xmin>
+			<ymin>127</ymin>
+			<xmax>546</xmax>
+			<ymax>584</ymax>
+		</bndbox>
+	</object>
+</annotation>

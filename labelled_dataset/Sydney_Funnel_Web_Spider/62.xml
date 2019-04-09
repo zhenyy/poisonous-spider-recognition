@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Sydney_Funnel_Web_Spider</folder>
+	<filename>62.jpg</filename>
+	<path>C:\Users\vincent916735\Desktop\poisonous-spider-recognition\labelled_dataset\Sydney_Funnel_Web_Spider\62.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Sydney_Funnel_Web_Spider</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>12</xmin>
+			<ymin>18</ymin>
+			<xmax>583</xmax>
+			<ymax>579</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>St Andrew’s Cross Spider</folder>
+	<filename>35.jpg</filename>
+	<path>C:\Users\vincent916735\Desktop\poisonous-spider-recognition\labelled_dataset\St Andrew’s Cross Spider\35.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>St Andrew's Cross Spider</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>189</xmin>
+			<ymin>30</ymin>
+			<xmax>420</xmax>
+			<ymax>565</ymax>
+		</bndbox>
+	</object>
+</annotation>
