@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Australian_Garden_Orb_Weaver_Spider</folder>
+	<filename>115.jpg</filename>
+	<path>C:\Users\vincent916735\Desktop\poisonous-spider-recognition\dataset\Australian_Garden_Orb_Weaver_Spider\115.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Garden_Orb_Weaver_Spider</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>115</xmin>
+			<ymin>177</ymin>
+			<xmax>430</xmax>
+			<ymax>472</ymax>
+		</bndbox>
+	</object>
+</annotation>
