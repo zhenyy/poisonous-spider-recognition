@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Red Headed Mouse Spider</folder>
+	<filename>Red Headed Mouse Spider_68.jpg</filename>
+	<path>C:\Users\vincent916735\Desktop\poisonous-spider-recognition\labelled_dataset\Red Headed Mouse Spider\Red Headed Mouse Spider_68.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Red Headed Mouse Spider</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>135</xmin>
+			<ymin>210</ymin>
+			<xmax>414</xmax>
+			<ymax>463</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Australia_Redback_Spider</folder>
+	<filename>Australia_Redback_Spider_110.jpg</filename>
+	<path>C:\Users\vincent916735\Desktop\poisonous-spider-recognition\labelled_dataset\Australia_Redback_Spider\Australia_Redback_Spider_110.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Redback Spider</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>39</xmin>
+			<ymin>107</ymin>
+			<xmax>537</xmax>
+			<ymax>543</ymax>
+		</bndbox>
+	</object>
+</annotation>

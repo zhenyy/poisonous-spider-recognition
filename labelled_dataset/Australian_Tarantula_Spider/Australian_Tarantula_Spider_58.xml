@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Australian_Tarantula_Spider</folder>
+	<filename>Australian_Tarantula_Spider_58.jpg</filename>
+	<path>C:\Users\vincent916735\Desktop\poisonous-spider-recognition\labelled_dataset\Australian_Tarantula_Spider\Australian_Tarantula_Spider_58.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Tarantula Spider</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>33</xmin>
+			<ymin>9</ymin>
+			<xmax>589</xmax>
+			<ymax>534</ymax>
+		</bndbox>
+	</object>
+</annotation>
