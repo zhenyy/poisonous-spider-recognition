@@ -16,6 +16,7 @@
 		AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE33D3F222561F4A003C0DA1 /* Main.storyboard */; };
 		AE33D3F522561F85003C0DA1 /* spider_vgg.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */; };
 		AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F622562132003C0DA1 /* LandingPage.swift */; };
+		AE948C8B2264D2CB00DB6EA2 /* UploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE948C8A2264D2CB00DB6EA2 /* UploadPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AE33D3F222561F4A003C0DA1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = spider_vgg.mlmodel; sourceTree = "<group>"; };
 		AE33D3F622562132003C0DA1 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		AE948C8A2264D2CB00DB6EA2 /* UploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				182DFCA2224F830300348D8B /* icon.png */,
 				AE33D3F222561F4A003C0DA1 /* Main.storyboard */,
 				AE33D3F622562132003C0DA1 /* LandingPage.swift */,
+				AE948C8A2264D2CB00DB6EA2 /* UploadPhoto.swift */,
 			);
 			path = SpiderRecognizer;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				AE33D3F522561F85003C0DA1 /* spider_vgg.mlmodel in Sources */,
 				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
 				182DFC91224F799600348D8B /* ViewController.swift in Sources */,
+				AE948C8B2264D2CB00DB6EA2 /* UploadPhoto.swift in Sources */,
 				182DFCA1224F7C5800348D8B /* spider_vgg.model in Sources */,
 				182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */,
 			);
