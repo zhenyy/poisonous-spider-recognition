@@ -11,7 +11,6 @@
 		182DFC91224F799600348D8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFC90224F799600348D8B /* ViewController.swift */; };
 		182DFC96224F799900348D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC95224F799900348D8B /* Assets.xcassets */; };
 		182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC97224F799900348D8B /* LaunchScreen.storyboard */; };
-		182DFCA1224F7C5800348D8B /* spider_vgg.model in Sources */ = {isa = PBXBuildFile; fileRef = 182DFCA0224F7C5800348D8B /* spider_vgg.model */; };
 		182DFCA3224F830300348D8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DFCA2224F830300348D8B /* icon.png */; };
 		AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE33D3F222561F4A003C0DA1 /* Main.storyboard */; };
 		AE33D3F522561F85003C0DA1 /* spider_vgg.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */; };
@@ -26,7 +25,6 @@
 		182DFC95224F799900348D8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182DFC98224F799900348D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182DFC9A224F799900348D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		182DFCA0224F7C5800348D8B /* spider_vgg.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = spider_vgg.model; sourceTree = "<group>"; };
 		182DFCA2224F830300348D8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		AE33D3F222561F4A003C0DA1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = spider_vgg.mlmodel; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 		182DFC8D224F799600348D8B /* SpiderRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				182DFCA0224F7C5800348D8B /* spider_vgg.model */,
 				AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */,
 				182DFC8E224F799600348D8B /* AppDelegate.swift */,
 				182DFC90224F799600348D8B /* ViewController.swift */,
@@ -155,7 +152,6 @@
 				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
 				182DFC91224F799600348D8B /* ViewController.swift in Sources */,
 				AE948C8B2264D2CB00DB6EA2 /* UploadPhoto.swift in Sources */,
-				182DFCA1224F7C5800348D8B /* spider_vgg.model in Sources */,
 				182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

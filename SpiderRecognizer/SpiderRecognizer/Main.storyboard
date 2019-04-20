@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Scan"/>
                                 <connections>
-                                    <segue destination="GRz-bv-mXt" kind="presentation" id="9bn-Ss-kTK"/>
+                                    <segue destination="m1i-KI-sai" kind="presentation" id="9bn-Ss-kTK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-0d-Zq7">
@@ -58,11 +58,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-E6-Egz">
-                                <rect key="frame" x="38" y="83" width="299" height="299"/>
+                                <rect key="frame" x="38" y="155" width="299" height="299"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose an image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKh-3X-fJp">
-                                <rect key="frame" x="121" y="414" width="133" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take a photo or open library" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKh-3X-fJp">
+                                <rect key="frame" x="40" y="515" width="294" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -72,7 +72,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Upload Photo" id="BBF-e8-H0x">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="1Pa-tq-weN"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="1Pa-tq-weN">
+                            <connections>
+                                <segue destination="4oi-FG-6Ii" kind="presentation" id="Cs7-VF-h3j"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Library" id="aFe-GH-IRC">
                                 <connections>
@@ -85,9 +89,6 @@
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
-                        <connections>
-                            <outlet property="backBarButtonItem" destination="1Pa-tq-weN" id="Kvt-za-ZcF"/>
-                        </connections>
                     </navigationItem>
                     <connections>
                         <outlet property="classifier" destination="EKh-3X-fJp" id="sgd-jb-Y2r"/>
@@ -98,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="-127.2" y="819.94002998500753"/>
         </scene>
-        <!--View Controller-->
+        <!--Scan-->
         <scene sceneID="PKj-u7-hfR">
             <objects>
                 <viewController id="GRz-bv-mXt" customClass="ViewController" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,12 +110,26 @@
                     <view key="view" contentMode="scaleToFill" id="au3-0F-5mj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-xq-R9a">
+                                <rect key="frame" x="29" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Scan" id="Qrz-ep-r1e">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="zeK-Wq-RXu">
+                            <connections>
+                                <segue destination="4oi-FG-6Ii" kind="presentation" id="VYU-4V-bjJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ds5-8n-nPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="119"/>
+            <point key="canvasLocation" x="682" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tQ3-DP-Tw9">
@@ -134,5 +149,26 @@
             </objects>
             <point key="canvasLocation" x="-906.39999999999998" y="819.94002998500753"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="whV-tt-jJt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m1i-KI-sai" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hVW-Hf-sFx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GRz-bv-mXt" kind="relationship" relationship="rootViewController" id="uZN-6A-3SE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Is8-so-gUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127.2" y="118.29085457271366"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VYU-4V-bjJ"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,17 +16,7 @@ class UploadPhoto: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var classifier: UILabel!
     
-//    let model = try? VNCoreMLModel(for: spider_vgg().model)
-    
-//    // create a label to hold the spider name and confidence
-//    let label: UILabel = {
-//        let label = UILabel()
-//        label.textColor = .white
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.text = "Label"
-//        label.font = label.font.withSize(15)
-//        return label
-//    }()
+    var model: VNCoreMLModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +29,7 @@ class UploadPhoto: UIViewController, UINavigationControllerDelegate {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("view will appear")
+        model = try? VNCoreMLModel(for: spider_vgg().model)
     }
     
     @IBAction func camera(_ sender: Any) {
@@ -76,21 +66,49 @@ class UploadPhoto: UIViewController, UINavigationControllerDelegate {
 }
 
 extension UploadPhoto: UIImagePickerControllerDelegate {
+    func prediciton(_ image: CVPixelBuffer) {
+        // load our CoreML model
+//        guard let model = try? VNCoreMLModel(for: spider_vgg().model) else { return }
+        
+        // run an inference with CoreML
+        let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
+            
+            // grab the inference results
+            guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
+            
+            // grab the highest confidence result
+            guard let Observation = results.first else { return }
+            
+            // create the label text components
+            let predclass = "\(Observation.identifier)"
+            let predconfidence = String(format: "%.02f", Observation.confidence * 100)
+            
+            // set the label text
+            DispatchQueue.main.async(execute: {
+                self.classifier.text = "\(predclass) \(predconfidence)%"
+            })
+        }
+        
+        // create a Core Video pixel buffer which is an image buffer that holds pixels in main memory
+        // Applications generating frames, compressing or decompressing video, or using Core Image
+        // can all make use of Core Video pixel buffers
+        // guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        
+        // execute the request
+        try? VNImageRequestHandler(cvPixelBuffer: image, options: [:]).perform([request])
+    }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        print("0")
-        
         picker.dismiss(animated: true)
         classifier.text = "Analyzing Image..."
         guard let image = info["UIImagePickerControllerOriginalImage"] as? UIImage else {
             return
         } //1
-        
-        print("1")
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 299, height: 299), true, 2.0)
         image.draw(in: CGRect(x: 0, y: 0, width: 299, height: 299))
@@ -103,8 +121,6 @@ extension UploadPhoto: UIImagePickerControllerDelegate {
         guard (status == kCVReturnSuccess) else {
             return
         }
-        
-        print("2")
         
         CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
@@ -120,42 +136,8 @@ extension UploadPhoto: UIImagePickerControllerDelegate {
         UIGraphicsPopContext()
         CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         imageView.image = newImage
-
-        print("3")
         
         // Core ML
-        
-        func prediciton(_ image: CVPixelBuffer) {
-            // load our CoreML model
-            guard let model = try? VNCoreMLModel(for: spider_vgg().model) else { return }
-            
-            // run an inference with CoreML
-            let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
-                
-                // grab the inference results
-                guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
-                
-                // grab the highest confidence result
-                guard let Observation = results.first else { return }
-                
-                // create the label text components
-                let predclass = "\(Observation.identifier)"
-                let predconfidence = String(format: "%.02f", Observation.confidence * 100)
-                
-                // set the label text
-                DispatchQueue.main.async(execute: {
-                    self.classifier.text = "\(predclass) \(predconfidence)%"
-                })
-            }
-            
-            // create a Core Video pixel buffer which is an image buffer that holds pixels in main memory
-            // Applications generating frames, compressing or decompressing video, or using Core Image
-            // can all make use of Core Video pixel buffers
-            // guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-            
-            // execute the request
-            try? VNImageRequestHandler(cvPixelBuffer: image, options: [:]).perform([request])
-        }
         
         prediciton(pixelBuffer!)
     }
