@@ -136,6 +136,7 @@ extension UploadPhoto: UIImagePickerControllerDelegate {
         UIGraphicsPopContext()
         CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         imageView.image = newImage
+        imageView.contentMode = UIView.ContentMode.scaleAspectFit
         
         // Core ML
         
