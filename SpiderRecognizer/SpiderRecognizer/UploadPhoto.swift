@@ -8,13 +8,15 @@
 
 import UIKit
 import CoreML
+import AVFoundation
+import Vision
 
 class UploadPhoto: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var classifier: UILabel!
     
-    let model = spider_vgg().model
+//    let model = try? VNCoreMLModel(for: spider_vgg().model)
     
 //    // create a label to hold the spider name and confidence
 //    let label: UILabel = {
@@ -78,7 +80,7 @@ extension UploadPhoto: UIImagePickerControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         print("0")
         
@@ -120,12 +122,41 @@ extension UploadPhoto: UIImagePickerControllerDelegate {
         imageView.image = newImage
 
         print("3")
-//        // Core ML
-//        guard let prediction = try? model.prediction(image: pixelBuffer!) else {
-//            return
-//        }
-//        classifier.text = "I think this is a \(prediction.classLabel)."
         
-        classifier.text = "I think this is a spider."
+        // Core ML
+        
+        func prediciton(_ image: CVPixelBuffer) {
+            // load our CoreML model
+            guard let model = try? VNCoreMLModel(for: spider_vgg().model) else { return }
+            
+            // run an inference with CoreML
+            let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
+                
+                // grab the inference results
+                guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
+                
+                // grab the highest confidence result
+                guard let Observation = results.first else { return }
+                
+                // create the label text components
+                let predclass = "\(Observation.identifier)"
+                let predconfidence = String(format: "%.02f", Observation.confidence * 100)
+                
+                // set the label text
+                DispatchQueue.main.async(execute: {
+                    self.classifier.text = "\(predclass) \(predconfidence)%"
+                })
+            }
+            
+            // create a Core Video pixel buffer which is an image buffer that holds pixels in main memory
+            // Applications generating frames, compressing or decompressing video, or using Core Image
+            // can all make use of Core Video pixel buffers
+            // guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+            
+            // execute the request
+            try? VNImageRequestHandler(cvPixelBuffer: image, options: [:]).perform([request])
+        }
+        
+        prediciton(pixelBuffer!)
     }
 }
