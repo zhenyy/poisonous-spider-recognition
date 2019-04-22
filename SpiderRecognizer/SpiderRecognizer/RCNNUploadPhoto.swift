@@ -1,8 +1,8 @@
 //
-//  UploadPhoto.swift
+//  RCNNUploadPhoto.swift
 //  SpiderRecognizer
 //
-//  Created by Zhenyuan Ye on 16/4/19.
+//  Created by Zhenyuan Ye on 22/4/19.
 //  Copyright © 2019 DonghanYang. All rights reserved.
 //
 
@@ -11,7 +11,8 @@ import CoreML
 import AVFoundation
 import Vision
 
-class UploadPhoto: UIViewController, UINavigationControllerDelegate {
+class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
+    
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var classifier: UILabel!
@@ -20,17 +21,18 @@ class UploadPhoto: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         model = try? VNCoreMLModel(for: spider_vgg().model)
     }
+  
     
     @IBAction func camera(_ sender: Any) {
         if !UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -45,6 +47,7 @@ class UploadPhoto: UIViewController, UINavigationControllerDelegate {
         present(cameraPicker, animated: true)
     }
     
+    
     @IBAction func openLibrary(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.allowsEditing = false
@@ -54,21 +57,21 @@ class UploadPhoto: UIViewController, UINavigationControllerDelegate {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
-extension UploadPhoto: UIImagePickerControllerDelegate {
+extension RCNNUploadPhoto: UIImagePickerControllerDelegate {
     func prediciton(_ image: CVPixelBuffer) {
         // load our CoreML model
-//        guard let model = try? VNCoreMLModel(for: spider_vgg().model) else { return }
+        //        guard let model = try? VNCoreMLModel(for: spider_vgg().model) else { return }
         
         // run an inference with CoreML
         let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
