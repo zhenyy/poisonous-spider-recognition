@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4oi-FG-6Ii">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,6 +10,91 @@
     </dependencies>
     <scenes>
         <!--Landing Page-->
+        <scene sceneID="IbM-P6-EcJ">
+            <objects>
+                <viewController id="dJN-pa-QwB" customClass="LandingPage" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f4y-4m-8QU"/>
+                        <viewControllerLayoutGuide type="bottom" id="drT-eS-2d8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SDH-fJ-18h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-Vi-PSA">
+                                <rect key="frame" x="167" y="280" width="80" height="30"/>
+                                <state key="normal" title="Basic Mode"/>
+                                <connections>
+                                    <segue destination="4oi-FG-6Ii" kind="presentation" id="x17-Gj-Rtn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDa-8N-IQa">
+                                <rect key="frame" x="151.66666666666666" y="353" width="110.99999999999997" height="30"/>
+                                <state key="normal" title="Advanced Mode"/>
+                                <connections>
+                                    <segue destination="Vky-Mg-yRY" kind="presentation" id="i07-92-eKI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cCM-Vi-PSA" firstAttribute="centerX" secondItem="SDH-fJ-18h" secondAttribute="centerX" id="9xd-YM-5vb"/>
+                            <constraint firstItem="cCM-Vi-PSA" firstAttribute="centerX" secondItem="zDa-8N-IQa" secondAttribute="centerX" id="G7s-Uq-jrB"/>
+                            <constraint firstItem="zDa-8N-IQa" firstAttribute="top" secondItem="cCM-Vi-PSA" secondAttribute="bottom" constant="43" id="fMa-Jk-8ot"/>
+                            <constraint firstItem="cCM-Vi-PSA" firstAttribute="top" secondItem="f4y-4m-8QU" secondAttribute="bottom" constant="260" id="l3V-sE-poN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzX-HF-ofU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1708" y="117"/>
+        </scene>
+        <!--Landing Page-->
+        <scene sceneID="26F-TO-rVb">
+            <objects>
+                <viewController id="Vky-Mg-yRY" customClass="LandingPage" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ipk-a1-ZIl"/>
+                        <viewControllerLayoutGuide type="bottom" id="wLC-68-rLr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OqF-oC-cUK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bie-ds-VIq">
+                                <rect key="frame" x="189.66666666666666" y="261" width="35" height="30"/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <segue destination="aug-PT-4wr" kind="presentation" id="rRM-C9-UJY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqB-Pr-O4c">
+                                <rect key="frame" x="154.66666666666666" y="353" width="104.99999999999997" height="30"/>
+                                <state key="normal" title="Upload a photo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMe-FG-HY7">
+                                <rect key="frame" x="26" y="28" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="dJN-pa-QwB" kind="presentation" id="KAD-3O-Bg8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bie-ds-VIq" firstAttribute="centerX" secondItem="OqF-oC-cUK" secondAttribute="centerX" id="3V3-fz-YRW"/>
+                            <constraint firstItem="lqB-Pr-O4c" firstAttribute="top" secondItem="bie-ds-VIq" secondAttribute="bottom" constant="62" id="43p-Yf-Fds"/>
+                            <constraint firstItem="bie-ds-VIq" firstAttribute="top" secondItem="Ipk-a1-ZIl" secondAttribute="bottom" constant="241" id="HIW-sL-NEO"/>
+                            <constraint firstItem="bie-ds-VIq" firstAttribute="centerX" secondItem="lqB-Pr-O4c" secondAttribute="centerX" id="sZ1-fQ-ohL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewk-mY-oWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-906" y="-619"/>
+        </scene>
+        <!--Landing Page-->
         <scene sceneID="3Cc-jc-vRX">
             <objects>
                 <viewController id="4oi-FG-6Ii" customClass="LandingPage" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,21 +103,29 @@
                         <viewControllerLayoutGuide type="bottom" id="A7c-Eb-AAW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xgv-m6-Fyg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-PW-3Gn">
-                                <rect key="frame" x="170" y="269" width="35" height="30"/>
+                                <rect key="frame" x="189.66666666666666" y="269" width="35" height="30"/>
                                 <state key="normal" title="Scan"/>
                                 <connections>
                                     <segue destination="m1i-KI-sai" kind="presentation" id="9bn-Ss-kTK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-0d-Zq7">
-                                <rect key="frame" x="135" y="337" width="105" height="30"/>
+                                <rect key="frame" x="154.66666666666666" y="337" width="104.99999999999997" height="30"/>
                                 <state key="normal" title="Upload a photo"/>
                                 <connections>
                                     <segue destination="FLG-hG-oMR" kind="presentation" id="3EK-Xo-Di4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMF-az-lGp">
+                                <rect key="frame" x="26" y="28" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="dJN-pa-QwB" kind="presentation" id="jXN-Z8-adc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,11 +151,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ixf-ff-QLR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CIt-zd-VJL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-E6-Egz">
-                                <rect key="frame" x="38" y="155" width="299" height="299"/>
+                                <rect key="frame" x="42" y="155" width="330" height="368"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Take a photo or open library" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKh-3X-fJp">
@@ -117,13 +210,13 @@
         <!--Scan-->
         <scene sceneID="PKj-u7-hfR">
             <objects>
-                <viewController id="GRz-bv-mXt" customClass="ViewController" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GRz-bv-mXt" customClass="CNNScan" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zSQ-5H-cj6"/>
                         <viewControllerLayoutGuide type="bottom" id="MdV-hm-gbi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="au3-0F-5mj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-xq-R9a">
@@ -152,7 +245,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FLG-hG-oMR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WdN-Zk-uyy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -170,7 +263,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m1i-KI-sai" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hVW-Hf-sFx">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -182,8 +275,63 @@
             </objects>
             <point key="canvasLocation" x="-127.2" y="118.29085457271366"/>
         </scene>
+        <!--Scan-->
+        <scene sceneID="Hna-Gk-wn9">
+            <objects>
+                <viewController id="0Xf-EA-shg" customClass="RCNNScan" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pzo-w4-lVr"/>
+                        <viewControllerLayoutGuide type="bottom" id="RH6-c2-P5s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FT3-vd-fEK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IB-O7-rYV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan" id="zZA-Oc-rNG">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="k8B-yU-i9q">
+                            <connections>
+                                <segue destination="Vky-Mg-yRY" kind="presentation" id="Jkz-sb-osp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="videoPreview" destination="3IB-O7-rYV" id="Jtm-TW-nfE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTO-Fg-koO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679.71014492753625" y="-619.56521739130437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LrK-Lq-sYa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aug-PT-4wr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Ua-7b-UfX">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Xf-EA-shg" kind="relationship" relationship="rootViewController" id="eaO-0L-9hW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AmK-EB-ScN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127.2" y="-619.34032983508246"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Cs7-VF-h3j"/>
+        <segue reference="i07-92-eKI"/>
+        <segue reference="jXN-Z8-adc"/>
     </inferredMetricsTieBreakers>
 </document>

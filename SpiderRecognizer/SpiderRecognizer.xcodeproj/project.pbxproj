@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFC8E224F799600348D8B /* AppDelegate.swift */; };
-		182DFC91224F799600348D8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFC90224F799600348D8B /* ViewController.swift */; };
+		182DFC91224F799600348D8B /* CNNScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFC90224F799600348D8B /* CNNScan.swift */; };
 		182DFC96224F799900348D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC95224F799900348D8B /* Assets.xcassets */; };
 		182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC97224F799900348D8B /* LaunchScreen.storyboard */; };
 		182DFCA3224F830300348D8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DFCA2224F830300348D8B /* icon.png */; };
 		AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE33D3F222561F4A003C0DA1 /* Main.storyboard */; };
 		AE33D3F522561F85003C0DA1 /* spider_vgg.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */; };
 		AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F622562132003C0DA1 /* LandingPage.swift */; };
+		AE45AF29226D829C00EA951D /* RCNNScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF28226D829C00EA951D /* RCNNScan.swift */; };
+		AE45AF2B226D82DE00EA951D /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2A226D82DE00EA951D /* VideoCapture.swift */; };
+		AE45AF2D226D830B00EA951D /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */; };
+		AE45AF2F226D836300EA951D /* MobileNetV2_SSDLite.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */; };
 		AE948C8B2264D2CB00DB6EA2 /* UploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE948C8A2264D2CB00DB6EA2 /* UploadPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		182DFC8B224F799600348D8B /* SpiderRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiderRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182DFC8E224F799600348D8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		182DFC90224F799600348D8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		182DFC90224F799600348D8B /* CNNScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNScan.swift; sourceTree = "<group>"; };
 		182DFC95224F799900348D8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182DFC98224F799900348D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182DFC9A224F799900348D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +33,10 @@
 		AE33D3F222561F4A003C0DA1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = spider_vgg.mlmodel; sourceTree = "<group>"; };
 		AE33D3F622562132003C0DA1 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		AE45AF28226D829C00EA951D /* RCNNScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCNNScan.swift; sourceTree = "<group>"; };
+		AE45AF2A226D82DE00EA951D /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxView.swift; sourceTree = "<group>"; };
+		AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2_SSDLite.mlmodel; sourceTree = "<group>"; };
 		AE948C8A2264D2CB00DB6EA2 /* UploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +72,7 @@
 			children = (
 				AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */,
 				182DFC8E224F799600348D8B /* AppDelegate.swift */,
-				182DFC90224F799600348D8B /* ViewController.swift */,
+				182DFC90224F799600348D8B /* CNNScan.swift */,
 				182DFC95224F799900348D8B /* Assets.xcassets */,
 				182DFC97224F799900348D8B /* LaunchScreen.storyboard */,
 				182DFC9A224F799900348D8B /* Info.plist */,
@@ -72,6 +80,10 @@
 				AE33D3F222561F4A003C0DA1 /* Main.storyboard */,
 				AE33D3F622562132003C0DA1 /* LandingPage.swift */,
 				AE948C8A2264D2CB00DB6EA2 /* UploadPhoto.swift */,
+				AE45AF28226D829C00EA951D /* RCNNScan.swift */,
+				AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */,
+				AE45AF2A226D82DE00EA951D /* VideoCapture.swift */,
+				AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */,
 			);
 			path = SpiderRecognizer;
 			sourceTree = "<group>";
@@ -148,9 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE45AF2F226D836300EA951D /* MobileNetV2_SSDLite.mlmodel in Sources */,
 				AE33D3F522561F85003C0DA1 /* spider_vgg.mlmodel in Sources */,
+				AE45AF2B226D82DE00EA951D /* VideoCapture.swift in Sources */,
+				AE45AF2D226D830B00EA951D /* BoundingBoxView.swift in Sources */,
 				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
-				182DFC91224F799600348D8B /* ViewController.swift in Sources */,
+				182DFC91224F799600348D8B /* CNNScan.swift in Sources */,
+				AE45AF29226D829C00EA951D /* RCNNScan.swift in Sources */,
 				AE948C8B2264D2CB00DB6EA2 /* UploadPhoto.swift in Sources */,
 				182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */,
 			);
