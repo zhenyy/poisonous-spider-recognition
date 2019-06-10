@@ -1,1 +1,0 @@
-python google_images_download.py --keywords "St Andrew’s Cross Spider" --limit 130 --chromedriver chromedriver
