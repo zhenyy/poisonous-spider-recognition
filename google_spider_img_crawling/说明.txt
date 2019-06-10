@@ -1,3 +1,0 @@
-说明网址：https://zhuanlan.zhihu.com/p/39696810
-
-运行指令：googleimagesdownload -k "搜索图片名字" -l 200 --chromedriver="./chromedriver"
