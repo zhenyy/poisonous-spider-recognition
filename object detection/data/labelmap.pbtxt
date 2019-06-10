@@ -1,0 +1,44 @@
+item {
+  id: 1
+  name: 'Garden Orb Weaver Spider'
+}
+
+item {
+  id: 2
+  name: 'Redback Spider'
+}
+
+item {
+  id: 3
+  name: 'Tarantula Spider'
+}
+
+item {
+  id: 4
+  name: 'White-Tailed Spider'
+}
+
+item {
+  id: 5
+  name: 'Daddy Long Legs Spider'
+}
+
+item {
+  id: 6
+  name: 'Huntsman Spider'
+}
+
+item {
+  id: 7
+  name: 'Red Headed Mouse Spider'
+}
+
+item {
+  id: 8
+  name: 'St Andrew\'s Cross Spider'
+}
+
+item {
+  id: 9
+  name: 'Funnel Web Spider'
+}

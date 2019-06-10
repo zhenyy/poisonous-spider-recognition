@@ -1,7 +1,11 @@
+# This script is obtained from:  
+# https://www.pyimagesearch.com/2018/04/23/running-keras-models-on-ios-with-coreml/
+# Author: Adrian Rosebrock
+# This script converts from Keras .model file to Core ML .mlmodel file
+
 # USAGE
 # python coremlconverter.py --model pokedex.model --labelbin lb.pickle
 
-# import necessary packages
 from keras.models import load_model
 import coremltools
 import argparse

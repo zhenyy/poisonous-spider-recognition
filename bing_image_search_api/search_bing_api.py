@@ -1,3 +1,8 @@
+# This script is obtained from:  
+# https://www.pyimagesearch.com/2018/04/09/how-to-quickly-build-a-deep-learning-image-dataset/
+
+# Author: Adrian Rosebrock
+
 # USAGE
 # python search_bing_api.py --query "charmander" --output dataset/charmander
 # python search_bing_api.py --query "pikachu" --output dataset/pikachu
