@@ -1,0 +1,2 @@
+# run this to use tensorboard to monitor the training progress
+tensorboard --logdir="C:/Users/Donghan Yang/Downloads/poisonous-spider-recognition/training/models/model/train" --host localhost --port 8088
